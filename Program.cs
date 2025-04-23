@@ -9,6 +9,11 @@ Debug.Assert(IsPrime(1) == false);
 Debug.Assert(IsPrime(104729) == true);
 Debug.Assert(IsPrime(25) == false);
 
+Debug.Assert(IsPalindromic(101) == true);
+Debug.Assert(IsPalindromic(23) == false);
+Debug.Assert(IsPalindromic(114232411) == true);
+
+
 static bool IsPrime(int num)
 {
     if (num <= 1)
@@ -21,4 +26,12 @@ static bool IsPrime(int num)
     return true;
 }
 
-
+static bool IsPalindromic(int num)
+{
+    string numString = num.ToString();
+    char[] numArray = numString.ToCharArray();
+    Array.Reverse(numArray);
+    if (numString == new string(numArray))
+        return true;
+    else return false;
+}
