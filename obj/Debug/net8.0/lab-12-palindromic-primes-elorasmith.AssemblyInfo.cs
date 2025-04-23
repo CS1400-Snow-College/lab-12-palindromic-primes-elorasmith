@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lab-12-palindromic-primes-elorasmith")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df92b577d02cba7aabadd0ae39711bcf97ddbea9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+647be46a9eff05ed22cba4685e4258303eca895b")]
 [assembly: System.Reflection.AssemblyProductAttribute("lab-12-palindromic-primes-elorasmith")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lab-12-palindromic-primes-elorasmith")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
