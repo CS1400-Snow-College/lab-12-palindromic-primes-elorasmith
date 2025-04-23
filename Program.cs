@@ -1,6 +1,7 @@
 ﻿
 // Elora Smith, 4/23/25, Lab 12 Palindromic Primes
 
+using System.Data;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -13,7 +14,7 @@ Debug.Assert(IsPrime(25) == false);
 Debug.Assert(IsPalindromic(101) == true);
 Debug.Assert(IsPalindromic(23) == false);
 Debug.Assert(IsPalindromic(114232411) == true);
-
+/*
 Console.Clear();
 int result = GetNthPalindromicPrime(100);
 Debug.Assert(result == 94049);
@@ -21,6 +22,28 @@ result = GetNthPalindromicPrime(6);
 Debug.Assert((result == 132) == false);
 //result = GetNthPalindromicPrime(1000);
 //Debug.Assert(result == 114232411);
+*/
+
+Console.Clear();
+Console.WriteLine("Welcome. Here you can find any index of the palindromic prime numbers. Which one would you like to see?");
+string? input = Console.ReadLine();
+int n;
+while (!int.TryParse(input, out n))
+{
+    Console.WriteLine("That's not a number. Try again.");
+    Console.WriteLine("Which nth palindromic prime would you like to see?");
+    input = Console.ReadLine();
+}
+while (n < 1 || n > 2000)
+{
+    Console.WriteLine("Number out of range. Try again.");
+    Console.WriteLine("Which nth palindromic prime would you like to see?");
+    n = Convert.ToInt32(Console.ReadLine());
+}
+
+int result = GetNthPalindromicPrime(n);
+Console.WriteLine($"The {n}th palindromic prime is {result}.");
+
 
 static int GetNthPalindromicPrime(int n)
 {
@@ -33,7 +56,6 @@ static int GetNthPalindromicPrime(int n)
         if (primePalindromes == n)
             break;
     }
-    Console.WriteLine($"num = {num}, primePalindromes = {primePalindromes}");
     return num;
 }
 
